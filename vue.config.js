@@ -1,6 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
 const { dependencies } = require('./package.json');
-const webpack = require('webpack');
 const path = require('path');
 
 const IS_PROD = process.env.NODE_ENV === 'production';
@@ -62,18 +61,12 @@ const externalsCDN = () => {
     `https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/axios/${getDependVersion(
       'axios',
     )}/axios.min.js`,
-    `https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/ant-design-vue/${getDependVersion(
-      'ant-design-vue',
-    )}/antd.min.js`,
+    `https://cdnjs.cloudflare.com/ajax/libs/vant/${getDependVersion('vant')}/vant.min.js`,
   ];
 
   return {
     links: getDNSLinks(jsCdn),
-    css: [
-      `https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/ant-design-vue/${getDependVersion(
-        'ant-design-vue',
-      )}/antd.min.css`,
-    ],
+    css: [`https://cdnjs.cloudflare.com/ajax/libs/vant/${getDependVersion('vant')}/index.min.css`],
     js: jsCdn,
   };
 };
