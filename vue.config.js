@@ -36,6 +36,7 @@ const externals = {
   'vue-router': 'VueRouter',
   pinia: 'Pinia',
   axios: 'axios',
+  'vue-demi': 'VueDemi',
   'vue-i18n': 'VueI18n',
   vant: 'Vant',
   'vant/lib/index.css': 'Vant',
@@ -52,7 +53,9 @@ const externalsCDN = () => {
     `https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue-i18n/${getDependVersion(
       'vue-i18n',
     )}/vue-i18n.global.prod.min.js`,
-    `https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/pinia/${getDependVersion(
+    `https://cdn.staticfile.org/vue-demi/${getDependVersion(
+      'vue-demi',
+    )}/index.iife.js``https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/pinia/${getDependVersion(
       'pinia',
     )}/pinia.iife.prod.min.js`,
     `https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/vue-i18n/${getDependVersion(
